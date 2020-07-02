@@ -41,8 +41,8 @@ const Admin: React.FC<IAdminProps> = (props) => {
 
   return (
     <>
-      <h3>Edit Chirp</h3>
-      <div className="input-group mb-3">
+      <h3 className="ml-5">Edit Chirp</h3>
+      <div className="input-group mb-3 container">
         <div className="input-group-prepend">
           <span className="input-group-text" id="basic-addon1">
             Username
@@ -57,7 +57,7 @@ const Admin: React.FC<IAdminProps> = (props) => {
           aria-describedby="basic-addon1"
           value={`${name}`}
         />
-        <div className="input-group">
+        <div className="input-group my-3">
           <div className="input-group-prepend">
             <span className="input-group-text">Message</span>
           </div>

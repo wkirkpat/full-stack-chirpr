@@ -41,7 +41,8 @@ const AddChirp: React.FC<IAddProps> = (props) => {
 
   return (
     <>
-      <div className="input-group mb-3">
+      <h3 className="ml-5">Add a Chirp</h3>
+      <div className="input-group mb-3 container">
         <div className="input-group-prepend">
           <span className="input-group-text" id="basic-addon1">
             Username
@@ -54,7 +55,7 @@ const AddChirp: React.FC<IAddProps> = (props) => {
           aria-label="Username"
           aria-describedby="basic-addon1"
         />
-        <div className="input-group">
+        <div className="input-group my-3">
           <div className="input-group-prepend">
             <span className="input-group-text">Message</span>
           </div>
