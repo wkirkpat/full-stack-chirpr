@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
 import AdminButton from "./AdminButton";
+import { Link } from "react-router-dom";
 
 const Home: React.FC<IHomeProps> = (props) => {
     const [chirps, setChirps] = useState<IChirp[]>([]);
@@ -25,7 +26,7 @@ const Home: React.FC<IHomeProps> = (props) => {
             return (
                 <div key={chirp.id} className="card">
                     <div className="card-body">
-                        <h5 className="card-title">{chirp.name}</h5>
+                       <Link to={`/mentions/${chirp.name}`}><h5 className="card-title">{chirp.name}</h5></Link> 
                         <p className="card-text">{chirp.content}</p>
                         <AdminButton id={chirp.id} />
                     </div>

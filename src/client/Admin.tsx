@@ -9,7 +9,6 @@ const Admin: React.FC<IAdminProps> = (props) => {
   const getChirp = async () => {
     let r = await fetch(`/api/chirps/${props.match.params.id}`);
     let chirp = await r.json();
-    console.log(chirp);
     setText(chirp.content);
     setName(chirp.name);
   };

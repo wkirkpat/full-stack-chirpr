@@ -18,6 +18,24 @@ const AddChirp: React.FC<IAddProps> = (props) => {
         text: text,
       }),
     });
+
+    //This checks to see if there is a mention in the chirp, then adds the mention to the table if there is
+    if (text.includes("@")) {
+      let newText = text.split("@");
+      let mention = newText[1].split(" ")[0];
+
+      fetch("/api/mentions", {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          mention: mention,
+        }),
+      });
+    }
+
     props.history.push("/");
   };
 
@@ -36,7 +54,7 @@ const AddChirp: React.FC<IAddProps> = (props) => {
           aria-label="Username"
           aria-describedby="basic-addon1"
         />
-       <div className="input-group">
+        <div className="input-group">
           <div className="input-group-prepend">
             <span className="input-group-text">Message</span>
           </div>
