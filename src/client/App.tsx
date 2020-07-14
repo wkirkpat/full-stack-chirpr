@@ -17,7 +17,6 @@ const App: React.FC<IAppProps> = (props) => {
             alt=""
           />{" "}
         </Link>
-
         <Link to="/">
           <button className="btn btn-primary mx-3">Home</button>
         </Link>
